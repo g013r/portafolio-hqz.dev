@@ -75,15 +75,16 @@ body{
     font-weight: bold;
 }
 
-.card-group{
-    background: var(--fondo-tarjetas);
-    padding: 100px;
-    border-radius: 20px;
-}
 .card-item{
     background-color: var(--fondo);
     color: var(--texto-principal);
     border-radius: 20px;
     margin: auto;
     max-width: 100%;
+    padding: 20px;
+}
+.card-div{
+    background: var(--fondo-tarjetas);
+    padding: 100px;
+    border-radius: 20px;
 }

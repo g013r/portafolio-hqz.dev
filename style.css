@@ -1,0 +1,89 @@
+:root{
+    --fondo: #1E1E2F;
+    --texto-secundario: #E5E5E5;
+    --botones: #2A3B58;
+    --botones-hover:#23324b;
+    --texto-principal: #ffffff;
+    --texto-destacado: #3D7FFF;
+    --subtitulo: #5A6E93;
+    --seccion-principal: #fff;
+    --acciones-secundarias: #C3E88D;
+    --divs: #2E2E48;
+    --errores: #FF5370;
+    --fondo-tarjetas: #292A3E;
+}
+body{
+    /*background: -webkit-linear-gradient(90deg, #89060c,#2e0000);
+    */
+    /*background: linear-gradient(90deg, #89060c,#2e0000);*/
+    font-family:Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #1A1A2E, #1E1E2F);
+}
+#foto{
+
+    border-radius: 100%;
+    max-width: 250px;
+    height: 250px;
+}
+
+#nombre{
+    color: var(--texto-destacado);
+}
+#texto-principal{
+    color: var(--texto-principal);
+}
+#subtitulo{
+    color: var(--subtitulo);
+    margin: auto;
+    border-right: 3px solid;
+    animation:  teclear 1s steps(18) alternate, efecto .5s  step-end infinite alternate;
+    width: max-content;
+}
+@keyframes teclear{
+    from{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes efecto{
+    50%{
+        border-color: transparent;
+    }
+}
+
+.nav-link{
+    color: var(--texto-secundario);
+    
+}
+
+#navegador{
+    background-color: #161624;
+}
+#boton{
+    background-color: var(--botones);
+    color: #fff;
+    width: 120px;
+    margin-right: 20px;
+}
+#boton:hover{
+    background-color: var(--botones-hover);
+}
+.btn{
+    font-weight: bold;
+}
+
+.card-group{
+    background: var(--fondo-tarjetas);
+    padding: 100px;
+    border-radius: 20px;
+}
+.card-item{
+    background-color: var(--fondo);
+    color: var(--texto-principal);
+    border-radius: 20px;
+    margin: auto;
+    max-width: 100%;
+}

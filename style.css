@@ -1,8 +1,8 @@
-:root{
+:root {
     --fondo: #1E1E2F;
     --texto-secundario: #E5E5E5;
     --botones: #2A3B58;
-    --botones-hover:#23324b;
+    --botones-hover: #23324b;
     --texto-principal: #ffffff;
     --texto-destacado: #3D7FFF;
     --subtitulo: #5A6E93;
@@ -12,70 +12,79 @@
     --errores: #FF5370;
     --fondo-tarjetas: #292A3E;
 }
-body{
+
+body {
     /*background: -webkit-linear-gradient(90deg, #89060c,#2e0000);
     */
     /*background: linear-gradient(90deg, #89060c,#2e0000);*/
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, #1A1A2E, #1E1E2F);
 }
-#foto{
+
+#foto {
 
     border-radius: 100%;
     max-width: 250px;
     height: 250px;
 }
 
-#nombre{
+#nombre {
     color: var(--texto-destacado);
 }
-#texto-principal{
+
+#texto-principal {
     color: var(--texto-principal);
 }
-#subtitulo{
+
+#subtitulo {
     color: var(--subtitulo);
     margin: auto;
     border-right: 3px solid;
-    animation:  teclear 1s steps(18) alternate, efecto .5s  step-end infinite alternate;
+    animation: teclear 1s steps(18) alternate, efecto .5s step-end infinite alternate;
     width: max-content;
 }
-@keyframes teclear{
-    from{
+
+@keyframes teclear {
+    from {
         clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     }
-    to{
+
+    to {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
 
-@keyframes efecto{
-    50%{
+@keyframes efecto {
+    50% {
         border-color: transparent;
     }
 }
 
-.nav-link{
+.nav-link {
     color: var(--texto-secundario);
-    
+
 }
 
-#navegador{
+#navegador {
     background-color: #161624;
 }
-#boton{
+
+#boton {
     background-color: var(--botones);
     color: #fff;
     width: 120px;
     margin-right: 20px;
 }
-#boton:hover{
+
+#boton:hover {
     background-color: var(--botones-hover);
 }
-.btn{
+
+.btn {
     font-weight: bold;
 }
 
-.card-item{
+.card-item {
     background-color: var(--fondo);
     color: var(--texto-principal);
     border-radius: 20px;
@@ -83,54 +92,64 @@ body{
     max-width: 100%;
     padding: 20px;
 }
-.card-div{
+
+.card-div {
     background: var(--fondo-tarjetas);
     padding: 100px;
     border-radius: 20px;
 }
-.flip-box{
+
+.flip-box {
     transform-style: preserve-3d;
     perspective: 1000px;
 }
-.flip-box-front{
+
+.flip-box-front {
     transform: rotateY(0deg);
     transform-style: preserve-3d;
 }
-.flip-box-front, .flip-box-back{
+
+.flip-box-front,
+.flip-box-back {
     background-size: cover;
     background-position: center;
-    transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+    transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
     backface-visibility: hidden;
 }
-.flip-box:hover .flip-box-front{
+
+.flip-box:hover .flip-box-front {
     transform: rotateY(-180deg);
     transform-style: preserve-3d;
 }
-.flip-box-back{
+
+.flip-box-back {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     transform: rotateY(180deg);
     transform-style: preserve-3d;
-    
+
 
 }
-.flip-box:hover .flip-box-back{
+
+.flip-box:hover .flip-box-back {
     transform: rotateY(0deg);
     transform-style: preserve-3d;
 }
-.circular-progress{
+
+.circular-progress {
     content: "";
+    color: var(--color);
     width: 8rem;
     height: 7rem;
     border-radius: 50%;
     margin: auto;
-    background: linear-gradient(to right, var(--color) 50%, var(--fondo-tarjetas) 50%);
+    background: conic-gradient(from 0deg, var(--color) var(--porcentaje), var(--fondo-tarjetas) var(--porcentaje));
     position: relative;
 }
 
-.circular-progress::before{
+.circular-progress::before {
     content: attr(data-label);
     color: attr(data-color);
     font-family: sans-serif;
